@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <title>Səyahət Planı Generatoru</title>
+</head>
+<body style="font-family: sans-serif; padding: 40px;">
+
+<h1>AI ilə Səyahət Planı Yarat ✈️</h1>
+
+<form action="/get-plan" method="post">
+
+  <p><strong>Səyahət stili</strong></p>
+  <select name="travelStyle" required>
+    <option value="Active">Aktiv</option>
+    <option value="Passive">Passiv</option>
+  </select>
+
+
+  <!-- INTERESTS -->
+  <p><strong>1. Hansı tip səyahəti sevirsən?</strong></p>
+  <label><input type="checkbox" name="interests" value="nature"> Təbiət</label><br>
+  <label><input type="checkbox" name="interests" value="city"> Şəhər</label><br>
+  <label><input type="checkbox" name="interests" value="history"> Tarix</label><br>
+  <label><input type="checkbox" name="interests" value="gastronomy"> Qastronomiya (Yemək)</label><br>
+  <label><input type="checkbox" name="interests" value="culture"> Mədəniyyət</label><br>
+  <label><input type="checkbox" name="interests" value="adventure"> Macəra (Adventure)</label><br>
+
+  <br>
+
+  <!-- PARTY TYPE -->
+  <p><strong>2. Kimlə səyahət edirsən?</strong></p>
+  <select name="travelWith" required>
+    <option value="">Seç</option>
+    <option value="solo">Tək</option>
+    <option value="couple">Cütlük</option>
+    <option value="family">Ailə</option>
+  </select>
+
+  <br><br>
+
+  <!-- ADULTS COUNT -->
+  <p><strong>3. Neçə böyüksünüz?</strong></p>
+  <input type="number" name="adultsCount" min="1" max="10" required>
+
+  <br><br>
+
+  <!-- CHILDREN COUNT -->
+  <p><strong>4. Neçə uşaq var?</strong></p>
+  <input type="number" name="childrenCount" min="0" max="10" value="0">
+
+  <br><br>
+
+  <!-- DAYS -->
+  <p><strong>5. Neçə günlük plan?</strong></p>
+  <select name="tripDays" required>
+    <option value="3">3 gün</option>
+    <option value="5">5 gün</option>
+    <option value="7">7 gün</option>
+  </select>
+
+  <br><br>
+
+  <!-- BUDGET -->
+  <p><strong>6. Büdcə səviyyəsi</strong></p>
+  <select name="budgetType" required>
+    <option value="Basic">Aşağı</option>
+    <option value="Standard">Orta</option>
+    <option value="Luxury">Yüksək</option>
+  </select>
+
+  <br><br>
+
+  <!-- CURRENCY -->
+  <p><strong>7. Valyuta</strong></p>
+  <select name="currency">
+    <option value="AZN">AZN</option>
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+  </select>
+
+  <br><br>
+
+  <button type="submit">Get your plan 🚀</button>
+
+</form>
+
+</body>
+</html>
